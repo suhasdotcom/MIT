@@ -3,7 +3,7 @@
  *
  *  Created on: 07-Jul-2019
  *  Author: suhas
- *  Insertion Sort
+ *  Bubble Sort
  *  Complexity O(n<sup>2</sup>)
  */
 
@@ -34,8 +34,8 @@ int main() {
 
 void bubbleSort(vector<int> &arrayToBeSorted) {
 	std::size_t i = 0, j = 0;
-	for (i = 0; i < arrayToBeSorted.size()-1; i++)	//first element is already sorted
-		for(j=0; j<arrayToBeSorted.size(); j++)
+	for (i = 0; i < arrayToBeSorted.size()-1; i++)
+		for(j=0; j<arrayToBeSorted.size()-i-1; j++)
 			if(arrayToBeSorted[j] > arrayToBeSorted[j+1])
 				swap(arrayToBeSorted[j], arrayToBeSorted[j+1]);
 }
